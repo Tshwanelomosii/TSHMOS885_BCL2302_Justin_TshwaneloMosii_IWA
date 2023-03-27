@@ -8,50 +8,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,400;1,700&display=swap" rel="stylesheet">
+<script src="/scripts.js" difer></script>
     <title>Tally Count </title>
 </head>
 <body>
     <header class="header">
-        <h1>
+        <h1 class="header_title">
             Tally Count
         </h1>
     </header>
 
-    
-    <aside class="controls">
-        <label>
-            <span>Display</span>
-            <select>
-                <option>SIngle</option>
-                <option>Multiple</option>
-            </select>
-        </label>
+     <!--<aside  class="controls">
+            <label>
+                <span>Display</span>
+                <select>
+                    <option>SIngle</option>
+                    <option>Multiple</option>
+                </select>
+            </label>
 
-        <label>
-            <span>Counter</span>
-            <select>
-                <option>Counter1</option>
-                <option>Counter2</option>
-                <option>Counter3</option>
-            </select>
-        </label>
+            <label>
+                <span>Counter</span>
+                <select>
+                    <option>Counter1</option>
+                    <option>Counter2</option>
+                    <option>Counter3</option>
+                </select>
+            </label>
 
-        <button>Settings</button>
+            <button>Settings</button>
 
 
-    </aside>
+        </aside> -->
+   
 
 
     <main class="counter">
-      <input class="counter_value" readonly value="10">
+      <input class="counter_value" readonly value="0">
       <div class="counter_actions">
-      <button class="counter_button">+</button>
       <button class="counter_button counter_button_first">-</button>
+      <button class="counter_button">+</button>
     </div>
     </main>
 
-    <footer>
-        Inspered by <a href="http://tallycount.app/">Tally Count</a> Note that is meerely a student practice project for learning JavaScript
+    <footer class="footer">
+        Inspered by <a class="footer_link" href="http://tallycount.app/">Tally Count</a> Note that is meerely a student practice project for learning JavaScript
     </footer>
      
 </body>
