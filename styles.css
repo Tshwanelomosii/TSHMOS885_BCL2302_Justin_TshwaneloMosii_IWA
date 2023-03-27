@@ -12,5 +12,11 @@
 
 body{
     margin: 0;
-    background: red;
+    background: var(--color-medium-grey);
+    color:var(--color-white);
+    font-family: Roboto,Arial, Helvetica, sans-serif;
 }   
+
+.header{
+    text-align: center  ;
+}
