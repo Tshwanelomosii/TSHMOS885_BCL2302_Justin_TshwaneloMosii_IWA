@@ -23,9 +23,16 @@ body{
 
 /* controls */
 .controls{
-     background: var(--color-dark-gre);
+     background:yellow ;
 }
 
 .counter{
-    background: var();
+    background: var(--color-dark-grey)
+}
+
+.counter_value{
+    width:100%;
+    height:15rem;   
+    text-align: center;
+    font-size:3rem;
 }
