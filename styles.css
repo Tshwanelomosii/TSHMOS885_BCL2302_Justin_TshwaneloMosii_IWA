@@ -20,3 +20,12 @@ body{
 .header{
     text-align: center  ;
 }
+
+/* controls */
+.controls{
+     background: var(--color-dark-gre);
+}
+
+.counter{
+    background: var();
+}
