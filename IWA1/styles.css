@@ -66,6 +66,10 @@ body{
     transform: translateY(2%);
 }
 
+.counter_button:disabled{
+    background: red;
+}
+
 .counter_button{
     background:none;
     border-width: 0;
