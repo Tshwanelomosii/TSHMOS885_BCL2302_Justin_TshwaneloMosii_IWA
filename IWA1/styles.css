@@ -67,7 +67,7 @@ body{
 }
 
 .counter_button:disabled{
-    background: red;
+    opacity:0.2;
 }
 
 .counter_button{
