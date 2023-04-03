@@ -1,11 +1,17 @@
-FREE_WARNING = 'Free shipping only applies to single customer orders'
-BANNED_WARNIN = 'Unfortunately we do not ship to your country of residence'
-NONE_SELECTED = '0'
+const FREE_WARNING = 'Free shipping only applies to single customer orders' // added const  to  define variables 
+const BANNED_WARNING = 'Unfortunately we do not ship to your country of residence' //added G in warning typo error and added const  to  define variables 
+const 	NONE_SELECTED = '0' // added const to  define variables 
+let location = 'RSA'
+let shipping = 400 ||  600 || 800 || null
+let currency = '$' || 'R'
 
-if (location = RSA) {
-	shipping === 400 && currency === 'R' 	
 
-if (location = NAM) {
+if (location) {
+	shipping === 400 && currency === 'R' 
+	
+
+location = 'NAM'
+if (location) {
 	shipping = 600 && currency === '$' //added currency value and equal sign 
 }
 
@@ -14,14 +20,12 @@ else {
 }
 }
 
-shoes = 300 * 1
-toys = 100 * 5  //added equal sign
-shirts = 150 * 'NONE_SELECTED'
-batteries = 35 * 2  //added equal sign
-pens = 5 * 'NONE_SELECTED' 
+let shoes = 300 * 1
+let toys = 100 * 5  //added equal sign
+let shirts = 150 * 'NONE_SELECTED'
+let batteries = 35 * 2  //added equal sign
+let pens = 5 * 'NONE_SELECTED' 
 
-shipping = null
-currency = $
 
 if (shoes + batteries + pens + shirts >= 1000 && currency === 'R' || 60 && currency === '$' ) {
 	if (location = NAM && customers < 2) {
@@ -31,10 +35,11 @@ if (shoes + batteries + pens + shirts >= 1000 && currency === 'R' || 60 && curre
 }
 
 
-if (shipping = 0) && (customers !=== 1) { console.log(WARNING) }
+if (shipping == 0 && customers !== 1) {
+	console.log('FREE_WARNING') }
 
 location = 'NK' ? console.log(WARNING) : console.log('price', currency, shoes + batteries + pens + shirts + shipping)
 
 customers = '1'
-const location = 'RSA'
+
 currency = null
