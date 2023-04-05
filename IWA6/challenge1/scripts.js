@@ -1,4 +1,4 @@
-const primaryPhone = 'O748105141' // fixed typo by adding zero instead of letter O
+const primaryPhone = 'O748105141' 
 const secondaryPhone = '0219131568'
 
 // Only change below this line
