@@ -32,7 +32,7 @@ const sarah ={
 	balance : sarahBalance,
 	address : {
 		number : sarahNumber,
-		street : sarahStreet
+		street : sarahStreet,
 		postalCode : sarahPostal,
 	}
 } //added curley brackets
