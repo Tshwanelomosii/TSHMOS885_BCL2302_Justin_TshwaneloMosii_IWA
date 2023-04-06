@@ -41,7 +41,7 @@ else  {
 
 if (shoes + toys + batteries + pens + shirts >= 1000  ) {
 	
-	if (customers !== 1 && (location === 'RSA' || location === 'NAM') )
+	if (customers === 1 && (location === 'RSA' || location === 'NAM') )
 	console.log(FREE_WARNING)
 	shipping = 0 
 

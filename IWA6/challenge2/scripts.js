@@ -8,11 +8,12 @@ const minuteOfDay = 00;
 
 // Only change below this line
 
-if (hourOfDay === 0 && minuteOfDay === 0 ) { //removed null
-	const taxAsDecimal = parseFloat(tax) / 100 //used parsefloat to include decimals
+if (hourOfDay == 0 && minuteOfDay == 0){
+	const taxAsDecimal = parseFloat(tax) / 100 
     const startingAfterTax = salary - (salary * taxAsDecimal)
-	let balance = startingAfterTax - transport - food - rent //typo error and startingaftertax
-
-    console.log('R',balance.toFixed(2))
+	let balance = startingAfterTax - transport - food - rent 
 }
+console.log('R',balance.toFixed(2))
+
+    
 	
