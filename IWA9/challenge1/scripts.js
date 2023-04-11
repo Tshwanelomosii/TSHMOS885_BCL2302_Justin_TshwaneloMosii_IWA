@@ -31,7 +31,7 @@ const rent = {
 // You can change below however you want
 
 const taxAsDecimal = parseFloat(tax[913]) / 100                                          // added parsefloat for decimal values
-const startingAfterTax = salary - (salary * taxAsDecimal)                               //had to subtract tax from original salary
+const startingAfterTax = `${salary - (salary * taxAsDecimal)}`                               //had to subtract tax from original salary
 const type = rent["large-apartment"]                                                   //delared rent as type 
 const balance = startingAfterTax - (expenses.transport + expenses.food + type)
 console.log('R',balance.toFixed(2))                                                   //added to fixed to make decimals
