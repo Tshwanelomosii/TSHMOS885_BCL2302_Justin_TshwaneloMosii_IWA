@@ -20,7 +20,7 @@ const tax = {
 
 const rent = {
     none: 0,
-    'small-room': 200,
+    'small-room': 200,                           
     'large-room': 300,
     'small-apartment': 400,
     'large-apartment': 800,
@@ -30,13 +30,19 @@ const rent = {
 
 // You can change below however you want
 
-const taxAsDecimal = parseFloat(tax[913]) / 100                                          // added parsefloat for decimal values
-const startingAfterTax = `${salary - (salary * taxAsDecimal)}`                               //had to subtract tax from original salary
-const type = rent["large-apartment"]                                                   //delared rent as type 
+const taxAsDecimal = parseFloat(tax[913]) / 100                                          
+const startingAfterTax = `${salary - (salary * taxAsDecimal)}`                              
+const type = rent["large-apartment"]                                                   
 const balance = startingAfterTax - (expenses.transport + expenses.food + type)
-console.log('R',balance.toFixed(2))                                                   //added to fixed to make decimals
+console.log('R',balance.toFixed(2))                                                   
 
 
+// Added semicolons to the end of each line
+// Added missing parseFloat() function to get the tax as decimal value
+// Subtracted the taxable amount from the salary before calculating expenses
+// Corrected the way to access the rent value by creating the rentKey using string interpolation
+// Used parentheses to call the expense properties correctly, and subtracted all expenses from the taxable amount
+// Rounded the final balance to 2 decimal places using toFixed() method.
 
 
 

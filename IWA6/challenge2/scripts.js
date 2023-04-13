@@ -12,8 +12,9 @@ if (hourOfDay == 0 && minuteOfDay == 0){
 	const taxAsDecimal = parseFloat(tax) / 100 
     const startingAfterTax = salary - (salary * taxAsDecimal)
 	const totalbalance = startingAfterTax - (transport + food + rent) 
-}
-console.log('R',totalbalance.toFixed(2))
+	console.log('R',totalbalance.toFixed(2))
 
     
 	
+}
+
