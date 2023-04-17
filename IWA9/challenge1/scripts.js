@@ -40,7 +40,19 @@ console.log('R',balance.toFixed(2))
 // Added semicolons to the end of each line
 // Added missing parseFloat() function to get the tax as decimal value
 // Subtracted the taxable amount from the salary before calculating expenses
-// Corrected the way to access the rent value by creating the rentKey using string interpolation
+
+
+//This line of code creates a new variable named type and assigns to it the value
+// of the property large-apartment from the rent object.
+
+//rent is an object, which is denoted by the use of curly braces {}.
+// In this case, rent is an object that contains properties that correspond to different types of rental properties.
+//The square brackets [] are used to access a property of an object using a dynamic key,
+// where the key name is a string. In this case, large-apartment is the key name that we are using to access a property of the rent object.
+//So, type will be equal to the value associated with the large-apartment property of the rent object.
+
+
+
 // Used parentheses to call the expense properties correctly, and subtracted all expenses from the taxable amount
 // Rounded the final balance to 2 decimal places using toFixed() method.
 

@@ -1,17 +1,21 @@
+// Select the first order and update its content based on its data attributes
+const order1 = document.querySelector('[data-key="order1"]'); // Find the element with a data-key attribute of "order1"
+const order1Biscuits = order1.querySelector('.biscuits .count'); // Find the element with class "biscuits" inside order1, and then find the child element with class "count"
+const order1Donuts = order1.querySelector('.donuts .count'); // Same as above, but for donuts
+const order1Pancakes = order1.querySelector('.pancakes .count'); // Same as above, but for pancakes
+const order1Status = order1.querySelector('.status dd'); // Find the element with class "status" inside order1, and then find the child element with tag "dd"
 
+order1Biscuits.textContent = order1.getAttribute('data-biscuits'); // Set the text content of order1Biscuits to the value of the "data-biscuits" attribute on order1
+order1Donuts.textContent = order1.getAttribute('data-donuts'); // Same as above, but for donuts
+order1Pancakes.textContent = order1.getAttribute('data-pancakes'); // Same as above, but for pancakes
 
+if(order1.getAttribute('data-delivered') === 'true') { // If the "data-delivered" attribute on order1 is "true"
+  order1Status.textContent = 'Delivered'; // Set the text content of order1Status to "Delivered"
+} else { // If the "data-delivered" attribute on order1 is not "true"
+  order1Status.textContent = 'Pending'; // Set the text content of order1Status to "Pending"
+}
 
-const order1 = document.querySelector('[data-key="order1"]');
-const order1Biscuits = order1.querySelector('.biscuits .count');
-const order1Donuts = order1.querySelector('.donuts .count');
-const order1Pancakes = order1.querySelector('.pancakes .count');
-const order1Status = order1.querySelector('.status dd');
-
-order1Biscuits.textContent = order1.getAttribute('data-biscuits');
-order1Donuts.textContent = order1.getAttribute('data-donuts');
-order1Pancakes.textContent = order1.getAttribute('data-pancakes');
-order1Status.textContent = order1.getAttribute('data-delivered') === 'true' ? 'Delivered' : 'Pending';
-
+// Select the second order and update its content based on its data attributes
 const order2 = document.querySelector('[data-key="order2"]');
 const order2Biscuits = order2.querySelector('.biscuits .count');
 const order2Donuts = order2.querySelector('.donuts .count');
@@ -21,8 +25,14 @@ const order2Status = order2.querySelector('.status dd');
 order2Biscuits.textContent = order2.getAttribute('data-biscuits');
 order2Donuts.textContent = order2.getAttribute('data-donuts');
 order2Pancakes.textContent = order2.getAttribute('data-pancakes');
-order2Status.textContent = order2.getAttribute('data-delivered') === 'true' ? 'Delivered' : 'Pending';
 
+if(order2.getAttribute('data-delivered') === 'true') {
+  order2Status.textContent = 'Delivered';
+} else {
+  order2Status.textContent = 'Pending';
+}
+
+// Select the third order and update its content based on its data attributes
 const order3 = document.querySelector('[data-key="order3"]');
 const order3Biscuits = order3.querySelector('.biscuits .count');
 const order3Donuts = order3.querySelector('.donuts .count');
@@ -32,9 +42,9 @@ const order3Status = order3.querySelector('.status dd');
 order3Biscuits.textContent = order3.getAttribute('data-biscuits');
 order3Donuts.textContent = order3.getAttribute('data-donuts');
 order3Pancakes.textContent = order3.getAttribute('data-pancakes');
-order3Status.textContent = order3.getAttribute('data-delivered') === 'true' ? 'Delivered' : 'Pending';
 
-//There are a few issues with the code in script.js. First, the variable names cannot start with a number. Second, the document() method is not a valid method. To interact with the DOM and retrieve elements, we need to use the document.querySelector() method. Lastly, we cannot use the assignment operator (=) to retrieve values from the data attributes. We need to use the getAttribute() method instead.
-// This code correctly selects the appropriate elements and updates their text content with the values from the data attributes. We first use the document.querySelector() method to select the appropriate dl element based on its data-key attribute. Then we use querySelector() again to select the specific dd element where we want to update the text content. Finally, we use getAttribute() to retrieve the value from the appropriate data attribute and update the text content accordingly. We also use a ternary operator to check whether the data-delivered attribute is true or false and display the appropriate status message.
-
-
+if(order3.getAttribute('data-delivered') === 'true') {
+  order3Status.textContent = 'Delivered';
+} else {
+  order3Status.textContent = 'Pending';
+}
