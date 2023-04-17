@@ -52,10 +52,10 @@ const christmas = 6;
 const futureId = 9;
 
 // check if futureId has a holiday assigned to it, if not log the message
-if (!holidays[futureId]) {
-  console.log(`ID ${futureId} not created yet`);
+if (holidays[futureId]) {
+  console.log(holidays [futureId].name);
 } else {
-  console.log(holidays[futureId].name);
+  console.log(`ID ${futureId} not created yet`);
 }
 
 // create a copy of the Christmas object with the name changed to 'X-mas Day' and the time changed to midnight
@@ -73,27 +73,53 @@ console.log('Name change:', copied.name);
 console.log('Date change:', copied.date.toLocaleDateString('en-US'));
 
 // get the first and last holiday of the year
-const firstHoliday = Object.values(holidays)
-  .sort((a, b) => a.date - b.date)
-  .find(holiday => holiday.date.getFullYear() === currentYear);
+const firstHoliday = Math.min (
+  new Date(holidays[0].date).getTime(),
+  new Date(holidays[1].date).getTime(),
+  new Date(holidays[2].date).getTime(),
+  new Date(holidays[3].date).getTime(),
+  new Date(holidays[4].date).getTime(),
+  new Date(holidays[5].date).getTime(),
+  new Date(holidays[6].date).getTime(),
+  new Date(holidays[7].date).getTime(),
+  new Date(holidays[8].date).getTime(),
 
-const lastHoliday = Object.values(holidays)
-  .sort((a, b) => b.date - a.date)
-  .find(holiday => holiday.date.getFullYear() === currentYear);
+  
+)
+
+const lastHoliday = Math.max(
+  new Date(holidays[0].date).getTime(),
+  new Date(holidays[1].date).getTime(),
+  new Date(holidays[2].date).getTime(),
+  new Date(holidays[3].date).getTime(),
+  new Date(holidays[4].date).getTime(),
+  new Date(holidays[5].date).getTime(),
+  new Date(holidays[6].date).getTime(),
+  new Date(holidays[7].date).getTime(),
+  new Date(holidays[8].date).getTime(),
+
+  
+)
 
 // format the dates as DD/MM/YYYY and log them
-const formatDate = date => {
-  const day = date.getDate().toString().padStart(2, '0');
-  const month = (date.getMonth() + 1).toString().padStart(2, '0');
-  const year = date.getFullYear().toString();
-  return `${day}/${month}/${year}`;
-};
 
-console.log('First holiday:', formatDate(firstHoliday.date));
-console.log('Last holiday:', formatDate(lastHoliday.date));
+  const firstday = firstHoliday.getDate().toString().padStart(2, '0');
+  const firstmonth = (firstHoliday.getMonth() + 1).toString().padStart(2, '0');
+  const firstyear = firstHoliday.getFullYear().toString();
+  console.log (`${firstday}/${firstmonth}/${firstyear}`);
+
+
+  const lastday = lastHoliday.getDate().toString().padStart(2, '0');
+  const lastmonth = (lastHoliday.getMonth() + 1).toString().padStart(2, '0');
+  const lastyear = lastHoliday.getFullYear().toString();
+  console.log (`${lastday}/${lastmonth}/${lastyear}`);
+
+
+
 
 // get a random holiday date and format it
 const randomHoliday = Object.values(holidays)[Math.floor(Math.random()) * Object.values(holidays)]
+console.log(randomHoliday)
 
 
 
