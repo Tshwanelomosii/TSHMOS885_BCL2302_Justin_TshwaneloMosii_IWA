@@ -6,13 +6,13 @@ let calculated = '1'
 
 
 const  logCalc = () => { 
-    const isString = typeof calculated = 'numerical-string' 
-    const calculatedAsNumber = isString ? calculated : parseNumber(calculated)
-    calculated === calculatedAsNumber + 1 
+    const isString = typeof calculated === 'string' 
+    const calculatedAsNumber = isString ? parseFloat(calculated)  : calculated
+    calculated = calculatedAsNumber + 1 
 }
 
 const calcUser = () => {
-  logCalc
+  logCalc()
   if (calculated > 2) user = 'John'
   if (calculated > 2) state = 'requesting'
   if (calculated > 3) state = 'idle'
