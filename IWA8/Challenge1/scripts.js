@@ -37,7 +37,5 @@ const sarah ={
 	}
 }                                                                         //added curley brackets
 
-console.log(leo,leoNumber,leoStreet,leoPostal)
-console.log(sarah,sarahNumber,sarahStreet,sarahPostal)
-//console.log(leo, leo[address][postal-code])
-//console.log(sarah, sarah[address][postal-code])
+console.log(leo.address.postalCode)
+console.log(sarah.address.postalCode)

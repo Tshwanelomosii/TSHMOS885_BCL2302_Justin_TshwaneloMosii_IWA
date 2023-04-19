@@ -1,4 +1,5 @@
-const currentYear = new Date().getFullYear() // Create a constant variable "currentYear" and assign the current year to it using the JavaScript built-in "Date()" method.
+const currentYear = new Date().getFullYear() // Create a constant variable "currentYear" and assign the
+                                             // current year to it using the  "Date()" method.
 
 const holidays = {// Create an object "holidays" which contains several holiday dates with their corresponding names and ids.
     0: {
@@ -52,6 +53,7 @@ const holidays = {// Create an object "holidays" which contains several holiday 
 const christmas = 6; // Create a constant variable "christmas" and assign the value "6" to it.
 const futureId = 9;  // Create a constant variable "futureId" and assign the value "9" to it.
 
+
 // check if item has been assigned to 9 key
 if (holidays[futureId]) { // Use an "if...else" statement to check if the "futureId" key exists in the "holidays" object. If it exists,
   console.log(holidays[futureId].name); // log the corresponding holiday name to the console. If it doesn't exist, 
@@ -62,6 +64,8 @@ if (holidays[futureId]) { // Use an "if...else" statement to check if the "futur
 let copied = { ...holidays[christmas] };  // Use the spread syntax to copy the "holidays[christmas]" object into a new "copied" object.
 const copiedDate = copied.date.getTime();  // Create a constant variable "copiedDate" and assign the timestamp of the date in the "copied" object "getTime()" method
 const christmasDate = holidays[christmas].date.getTime(); // Create a constant variable "christmasDate" and assign the timestamp of the date in the "holidays[christmas]" object 
+copied.name = "x-mas"
+copied.date = new Date(`25 December ${currentYear} 00:00`)
 
 //check if the date copied is earlier then the old date
 let isEarlier;
